@@ -24,6 +24,7 @@ window.Vue = require('vue');
 Vue.component('Sidebar', require('./components/Sidebar.vue').default);
 Vue.component('Formulaire', require('./components/Formulaire.vue').default);
 Vue.component('Table', require('./components/Table.vue').default);
+Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

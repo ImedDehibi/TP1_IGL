@@ -17,9 +17,12 @@ Route::get('/', function () {
 Route::get('Profil',function(){
     return view('Profil');
 });
-Route::get('Login',function(){
-    return view('Login');
-});
+Route::view('Login','Login');
 Route::get('/Profil/Supprimer-utilisateur',function(){
     return view('Supp');
 });
+Route::get('client','ClientsController@list');
+Route::view('Paramètres','Paramètres');
+Route::view('a-propos','a-propos');
+Route::view('Description','Description');
+Route::post('client','ClientsController@store');
