@@ -66,9 +66,7 @@
     <body>
         <div class="flex-center position-ref full-height">
         <div id="app">
-            <Button >Connexion</Button>
-            <App></App>
-
+           <Welcome></welcome>
 </div>
 <script src="{{ asset('js/app.js') }}"></script>
 

@@ -2103,6 +2103,18 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'FormsPage',
@@ -9018,7 +9030,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\nsection{\r\n  Padding-left: 300px;\r\n  margin-top: 70px;\n}\n.form-gradient .font-small {\r\n    font-size: 0.8rem;\n}\n.form-gradient .header {\r\n    border-top-left-radius: .3rem;\r\n    border-top-right-radius: .3rem;\n}\n.form-gradient input[type=text]:focus:not([readonly]) {\r\n    border-bottom: 1px solid #fd9267;\r\n    box-shadow: 0 1px 0 0 #fd9267;\n}\n.form-gradient input[type=text]:focus:not([readonly]) + label {\r\n    color: #4f4f4f;\n}\n.form-gradient input[type=password]:focus:not([readonly]) {\r\n    border-bottom: 1px solid #fd9267;\r\n    box-shadow: 0 1px 0 0 #fd9267;\n}\n.form-gradient input[type=password]:focus:not([readonly]) + label {\r\n    color: #4f4f4f;\n}\nbody{\r\n      background-color: lightgrey;\n}\r\n\r\n", ""]);
+exports.push([module.i, "\nsection{\r\n\r\n  margin-top: 70px;\n}\n.form-gradient .font-small {\r\n    font-size: 0.8rem;\n}\n.form-gradient .header {\r\n    border-top-left-radius: .3rem;\r\n    border-top-right-radius: .3rem;\n}\n.form-gradient input[type=text]:focus:not([readonly]) {\r\n    border-bottom: 1px solid #fd9267;\r\n    box-shadow: 0 1px 0 0 #fd9267;\n}\n.form-gradient input[type=text]:focus:not([readonly]) + label {\r\n    color: #4f4f4f;\n}\n.form-gradient input[type=password]:focus:not([readonly]) {\r\n    border-bottom: 1px solid #fd9267;\r\n    box-shadow: 0 1px 0 0 #fd9267;\n}\n.form-gradient input[type=password]:focus:not([readonly]) + label {\r\n    color: #4f4f4f;\n}\r\n    \r\n\r\n", ""]);
 
 // exports
 
@@ -46594,7 +46606,7 @@ var render = function() {
                 [
                   _c(
                     "div",
-                    { staticClass: "header pt-3 purple-gradient" },
+                    { staticClass: "header pt-3 blue-gradient" },
                     [
                       _c(
                         "mdb-row",
@@ -46651,60 +46663,84 @@ var render = function() {
                       ),
                       _vm._v(" "),
                       _c(
-                        "mdb-form-inline",
+                        "div",
+                        {
+                          staticClass:
+                            "custom-control custom-radio custom-control-inline"
+                        },
                         [
-                          _c("mdb-input", {
+                          _c("input", {
+                            staticClass: "custom-control-input",
                             attrs: {
                               type: "radio",
-                              id: "option5-1",
-                              name: "groupOfMaterialRadios2",
-                              radioValue: "1",
-                              label: "Admin"
-                            },
-                            model: {
-                              value: _vm.radio5,
-                              callback: function($$v) {
-                                _vm.radio5 = $$v
-                              },
-                              expression: "radio5"
+                              id: "defaultInline1",
+                              name: "inlineDefaultRadiosExample"
                             }
                           }),
                           _vm._v(" "),
-                          _c("mdb-input", {
+                          _c(
+                            "label",
+                            {
+                              staticClass: "custom-control-label",
+                              attrs: { for: "defaultInline1" }
+                            },
+                            [_vm._v("Etud")]
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "custom-control custom-radio custom-control-inline"
+                        },
+                        [
+                          _c("input", {
+                            staticClass: "custom-control-input",
                             attrs: {
                               type: "radio",
-                              id: "option5-2",
-                              name: "groupOfMaterialRadios2",
-                              radioValue: "2",
-                              label: "Ens"
-                            },
-                            model: {
-                              value: _vm.radio5,
-                              callback: function($$v) {
-                                _vm.radio5 = $$v
-                              },
-                              expression: "radio5"
+                              id: "defaultInline2",
+                              name: "inlineDefaultRadiosExample"
                             }
                           }),
                           _vm._v(" "),
-                          _c("mdb-input", {
+                          _c(
+                            "label",
+                            {
+                              staticClass: "custom-control-label",
+                              attrs: { for: "defaultInline2" }
+                            },
+                            [_vm._v("Ens")]
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "custom-control custom-radio custom-control-inline"
+                        },
+                        [
+                          _c("input", {
+                            staticClass: "custom-control-input",
                             attrs: {
                               type: "radio",
-                              id: "option5-3",
-                              name: "groupOfMaterialRadios2",
-                              radioValue: "3",
-                              label: "Etud"
-                            },
-                            model: {
-                              value: _vm.radio5,
-                              callback: function($$v) {
-                                _vm.radio5 = $$v
-                              },
-                              expression: "radio5"
+                              id: "defaultInline3",
+                              name: "inlineDefaultRadiosExample"
                             }
-                          })
-                        ],
-                        1
+                          }),
+                          _vm._v(" "),
+                          _c(
+                            "label",
+                            {
+                              staticClass: "custom-control-label",
+                              attrs: { for: "defaultInline3" }
+                            },
+                            [_vm._v("Admin")]
+                          )
+                        ]
                       ),
                       _vm._v(" "),
                       _c(
@@ -46727,7 +46763,7 @@ var render = function() {
                                 [
                                   _c(
                                     "mdb-btn",
-                                    { attrs: { outline: "secondary" } },
+                                    { attrs: { outline: "primary" } },
                                     [_vm._v("Connexion")]
                                   )
                                 ],
@@ -47136,6 +47172,75 @@ var render = function() {
   )
 }
 var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Welcome.vue?vue&type=template&id=51777872&":
+/*!**********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Welcome.vue?vue&type=template&id=51777872& ***!
+  \**********************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-md-12" }, [
+        _c("ul", { staticClass: "stepper stepper-horizontal" }, [
+          _c("li", { staticClass: "list-group-item list-group-item-primary" }, [
+            _c("a", { attrs: { href: "#!" } }, [
+              _c("span", { staticClass: "circle " }, [_vm._v("1")]),
+              _c("br"),
+              _vm._v(" "),
+              _c("span", { staticClass: "label" }, [
+                _vm._v("Notre application")
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("li", { staticClass: "list-group-item list-group-item-info" }, [
+            _c("a", { attrs: { href: "Login" } }, [
+              _c("span", { staticClass: "circle" }, [_vm._v("2")]),
+              _c("br"),
+              _vm._v(" "),
+              _c("span", { staticClass: "label" }, [_vm._v("Connectez vous")])
+            ])
+          ]),
+          _vm._v(" "),
+          _c(
+            "li",
+            { staticClass: "list-group-item list-group-item-secondary" },
+            [
+              _c("a", { attrs: { href: "a-propos" } }, [
+                _c("span", { staticClass: "circle" }, [_vm._v("3")]),
+                _vm._v(" "),
+                _c("span", { staticClass: "label" }, [
+                  _vm._v("Renseignez vous")
+                ])
+              ])
+            ]
+          )
+        ])
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -61799,6 +61904,7 @@ Vue.component('Sidebar', __webpack_require__(/*! ./components/Sidebar.vue */ "./
 Vue.component('Formulaire', __webpack_require__(/*! ./components/Formulaire.vue */ "./resources/js/components/Formulaire.vue")["default"]);
 Vue.component('Table', __webpack_require__(/*! ./components/Table.vue */ "./resources/js/components/Table.vue")["default"]);
 Vue.component('example-component', __webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue")["default"]);
+Vue.component('Welcome', __webpack_require__(/*! ./components/Welcome.vue */ "./resources/js/components/Welcome.vue")["default"]);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -62145,6 +62251,59 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Table_vue_vue_type_template_id_5bd01d73___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Table_vue_vue_type_template_id_5bd01d73___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/Welcome.vue":
+/*!*********************************************!*\
+  !*** ./resources/js/components/Welcome.vue ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Welcome_vue_vue_type_template_id_51777872___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Welcome.vue?vue&type=template&id=51777872& */ "./resources/js/components/Welcome.vue?vue&type=template&id=51777872&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+var script = {}
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
+  script,
+  _Welcome_vue_vue_type_template_id_51777872___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Welcome_vue_vue_type_template_id_51777872___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Welcome.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Welcome.vue?vue&type=template&id=51777872&":
+/*!****************************************************************************!*\
+  !*** ./resources/js/components/Welcome.vue?vue&type=template&id=51777872& ***!
+  \****************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Welcome_vue_vue_type_template_id_51777872___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Welcome.vue?vue&type=template&id=51777872& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Welcome.vue?vue&type=template&id=51777872&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Welcome_vue_vue_type_template_id_51777872___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Welcome_vue_vue_type_template_id_51777872___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

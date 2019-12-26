@@ -22,7 +22,6 @@
 </div>
 @enderror
 </div>
-
 <button type="submit" class="btn btn-primary">Ajouter Client </button>
 </form>
 @endsection

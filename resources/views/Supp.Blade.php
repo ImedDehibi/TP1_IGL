@@ -4,5 +4,5 @@
             <div>
        <Table></Table>
          </div>
-        </div>
+     
         @endsection
