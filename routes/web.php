@@ -21,6 +21,20 @@ Route::view('Login','Login');
 Route::get('/Profil/Supprimer-utilisateur',function(){
     return view('Supp');
 });
+
+Route::get('/RenseignerPresence', function () {
+    return view('RenseignerPresence');
+});
+
+Route::get('/Presences', [
+    'uses' => 'PresencesController@effacer',
+    'uses' => 'PresencesController@index'
+]);
+
+Route::post('/create/Presence', [
+    'uses' => 'PresencesController@store'
+]);
+
 Route::get('client','ClientsController@list');
 Route::view('Paramètres','Paramètres');
 Route::view('a-propos','a-propos');
