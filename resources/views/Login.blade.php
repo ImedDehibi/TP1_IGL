@@ -33,6 +33,11 @@
 </html>
 <style>
     body{
-      background-color: lightblue;
+        padding-bottom: 70px;
+    background-color: #202428;
+    background-image: url(../Images/Capture.png);
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image*/
+    background-size: cover; /* Resize the background image to cover the entire container */
     }
     </style>

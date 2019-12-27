@@ -94,6 +94,8 @@ section{
 
   .form-gradient input[type=password]:focus:not([readonly]) + label {
     color: #4f4f4f; }
-    
+    template{
+      background-color: lightblue;
+    }
 
 </style>

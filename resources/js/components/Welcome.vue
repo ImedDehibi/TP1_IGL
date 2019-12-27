@@ -17,15 +17,16 @@
       </li>
 
       <!-- Second Step -->
-      <li class="list-group-item list-group-item-info">
+      <li class="list-group-item list-group-item-primary">
         <a href="Login">
           <span class="circle">2</span><br>
           <span class="label">Connectez vous</span>
+          
         </a>
       </li>
 
       <!-- Third Step -->
-      <li class="list-group-item list-group-item-secondary">
+      <li class="list-group-item list-group-item-danger">
         <a href="a-propos">
           <span class="circle">3</span>
           <span class="label">Renseignez vous</span>
@@ -38,5 +39,4 @@
   </div>
 </div>
 <!-- /.Horizontal Steppers -->
-      
-    </template>
+</template>

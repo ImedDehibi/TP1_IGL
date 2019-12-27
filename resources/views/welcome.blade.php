@@ -12,7 +12,12 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
+              padding-bottom: 70px;
+    background-color: #202428;
+    background-image: url(../Images/Capture.png);
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image*/
+    background-size: cover; /* Resize the background image to cover the entire container */
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
@@ -66,7 +71,7 @@
     <body>
         <div class="flex-center position-ref full-height">
         <div id="app">
-           <Welcome></welcome>
+         <welcome><welcome>
 </div>
 <script src="{{ asset('js/app.js') }}"></script>
 
