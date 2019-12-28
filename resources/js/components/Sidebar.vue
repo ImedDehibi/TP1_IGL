@@ -1,7 +1,7 @@
 <template>
     <div style="padding-top:200px;padding-left:300px">
   
-    <mdb-btn color="deep-purple" @click.native="contact = true">Ajouter un utilisateur</mdb-btn>
+    <mdb-btn color="deep-purple" @click.native="contact = true">Ajouter un utilisateur</mdb-btn><br>
     <mdb-modal :show="contact" @close="contact = false">
       <mdb-modal-header class="text-center">
         <mdb-modal-title tag="h4" bold class="w-100">Ajout d'un utilisateur</mdb-modal-title>
@@ -15,7 +15,7 @@
         <p>Date de naissance</p>
         <datepicker :bootstrap-styling="true">
   <div slot="beforeCalendarHeader" class="calender-header" language="fr">
-    Choose a Date
+    Choisissez la date
   </div>
 </datepicker>
       </mdb-modal-body>
@@ -23,7 +23,7 @@
         <mdb-btn @click.native="contact1 = false" color="unique">Ajouter</mdb-btn>
       </mdb-modal-footer>
     </mdb-modal>
-            <mdb-btn color="deep-purple" @click.native="contact1 = true">Modifier un utilisateur</mdb-btn>
+            <mdb-btn color="deep-purple" @click.native="contact1 = true">Modifier un utilisateur</mdb-btn><br>
     <mdb-modal :show="contact1" @close="contact1 = false">
       <mdb-modal-header class="text-center">
         <mdb-modal-title tag="h4" bold class="w-100">Modification d'un utilisateur</mdb-modal-title>
@@ -45,7 +45,7 @@
         <mdb-btn @click.native="contact1 = false" color="unique">Modifier</mdb-btn>
       </mdb-modal-footer>
     </mdb-modal>
-                <mdb-btn color="deep-purple" @click.native="contact2 = true">Supprimer un utilisateur</mdb-btn>
+                <mdb-btn color="deep-purple" @click.native="contact2 = true">Supprimer un utilisateur</mdb-btn><br>
               
     
     </div>

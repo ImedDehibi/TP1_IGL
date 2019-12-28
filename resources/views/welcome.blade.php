@@ -7,8 +7,7 @@
         <title>Laravel</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
+      
         <!-- Styles -->
         <style>
             html, body {
@@ -72,6 +71,8 @@
         <div class="flex-center position-ref full-height">
         <div id="app">
          <welcome><welcome>
+         <example-component></example-component>
+      
 </div>
 <script src="{{ asset('js/app.js') }}"></script>
 

@@ -2049,7 +2049,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {},
   mounted: function mounted() {
     console.log('Component mounted.');
   }
@@ -2146,8 +2148,21 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var mdbvue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! mdbvue */ "./node_modules/mdbvue/lib/index.js");
-/* harmony import */ var mdbvue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(mdbvue__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var http__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! http */ "./node_modules/stream-http/index.js");
+/* harmony import */ var http__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(http__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var vuejs_datepicker__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuejs-datepicker */ "./node_modules/vuejs-datepicker/dist/vuejs-datepicker.esm.js");
+/* harmony import */ var mdbvue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! mdbvue */ "./node_modules/mdbvue/lib/index.js");
+/* harmony import */ var mdbvue__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(mdbvue__WEBPACK_IMPORTED_MODULE_2__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -2169,20 +2184,27 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
+
+
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'ModalExamplesPage',
+  name: 'FormsPage',
   components: {
-    mdbContainer: mdbvue__WEBPACK_IMPORTED_MODULE_0__["mdbContainer"],
-    mdbBtn: mdbvue__WEBPACK_IMPORTED_MODULE_0__["mdbBtn"],
-    mdbIcon: mdbvue__WEBPACK_IMPORTED_MODULE_0__["mdbIcon"],
-    mdbModal: mdbvue__WEBPACK_IMPORTED_MODULE_0__["mdbModal"],
-    mdbModalHeader: mdbvue__WEBPACK_IMPORTED_MODULE_0__["mdbModalHeader"],
-    mdbModalBody: mdbvue__WEBPACK_IMPORTED_MODULE_0__["mdbModalBody"],
-    mdbModalFooter: mdbvue__WEBPACK_IMPORTED_MODULE_0__["mdbModalFooter"]
+    mdbContainer: mdbvue__WEBPACK_IMPORTED_MODULE_2__["mdbContainer"],
+    mdbRow: mdbvue__WEBPACK_IMPORTED_MODULE_2__["mdbRow"],
+    mdbCol: mdbvue__WEBPACK_IMPORTED_MODULE_2__["mdbCol"],
+    mdbInput: mdbvue__WEBPACK_IMPORTED_MODULE_2__["mdbInput"],
+    mdbTextarea: mdbvue__WEBPACK_IMPORTED_MODULE_2__["mdbTextarea"],
+    mdbBtn: mdbvue__WEBPACK_IMPORTED_MODULE_2__["mdbBtn"],
+    mdbIcon: mdbvue__WEBPACK_IMPORTED_MODULE_2__["mdbIcon"],
+    mdbModal: mdbvue__WEBPACK_IMPORTED_MODULE_2__["mdbModal"],
+    mdbModalHeader: mdbvue__WEBPACK_IMPORTED_MODULE_2__["mdbModalHeader"],
+    mdbModalBody: mdbvue__WEBPACK_IMPORTED_MODULE_2__["mdbModalBody"],
+    mdbModalFooter: mdbvue__WEBPACK_IMPORTED_MODULE_2__["mdbModalFooter"],
+    Datepicker: vuejs_datepicker__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
   data: function data() {
     return {
-      push: false
+      showModal: false
     };
   }
 });
@@ -46612,7 +46634,7 @@ var staticRenderFns = [
             _vm._v(" "),
             _c("div", { staticClass: "card-body" }, [
               _vm._v(
-                "\n                    I'm an example component.\n                "
+                "\n                    I'm an example component.\n                  \n                "
               )
             ])
           ])
@@ -46873,85 +46895,135 @@ var render = function() {
     "mdb-container",
     [
       _c(
-        "mdb-btn",
-        {
-          staticClass: "mb-3",
-          attrs: { color: "default" },
-          on: {
-            click: function($event) {
-              _vm.push = true
-            }
-          }
-        },
-        [_vm._v("Connexion")]
-      ),
-      _vm._v(" "),
-      _c(
-        "mdb-modal",
-        {
-          staticClass: "text-center",
-          attrs: { show: _vm.push, info: "" },
-          on: {
-            close: function($event) {
-              _vm.push = false
-            }
-          }
-        },
+        "mdb-row",
         [
-          _c("mdb-modal-header", { attrs: { center: "", close: false } }, [
-            _c("p", { staticClass: "heading" }, [_vm._v("Connectez-vous")])
-          ]),
-          _vm._v(" "),
           _c(
-            "mdb-modal-body",
-            [
-              _c("mdb-icon", {
-                staticClass: "animated rotateIn mb-4",
-                attrs: { icon: "bell", size: "4x" }
-              }),
-              _vm._v(" "),
-              _c("p", [
-                _vm._v(
-                  "Do you want to receive the push notification about the newest posts?"
-                )
-              ])
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "mdb-modal-footer",
-            { attrs: { center: "" } },
+            "mdb-col",
+            { staticClass: "text-center mb-5", attrs: { size: "12" } },
             [
               _c(
                 "mdb-btn",
                 {
-                  attrs: {
-                    outline: "primary",
-                    tag: "a",
-                    href: "https://mdbootstrap.com/docs/vue/newsletter/",
-                    target: "_blank"
-                  },
-                  on: {
+                  attrs: { color: "info" },
+                  nativeOn: {
                     click: function($event) {
-                      _vm.push = false
+                      _vm.showModal = true
                     }
                   }
                 },
-                [_vm._v("Yes")]
+                [_vm._v("Fiche de renseignement")]
               ),
               _vm._v(" "),
               _c(
-                "mdb-btn",
+                "mdb-modal",
                 {
-                  attrs: { color: "primary" },
+                  staticClass: "text-left",
+                  attrs: { show: _vm.showModal, cascade: "" },
                   on: {
-                    click: function($event) {
-                      _vm.push = false
+                    close: function($event) {
+                      _vm.showModal = false
                     }
                   }
                 },
-                [_vm._v("No")]
+                [
+                  _c(
+                    "mdb-modal-header",
+                    { staticClass: "primary-color white-text" },
+                    [
+                      _c("h4", { staticClass: "title" }, [
+                        _vm._v(" Renseignez-vous")
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "mdb-modal-body",
+                    { staticClass: "grey-text" },
+                    [
+                      _c("mdb-input", {
+                        attrs: {
+                          size: "sm",
+                          label: "Nom",
+                          group: "",
+                          type: "text",
+                          validate: "",
+                          error: "wrong",
+                          success: "right"
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("mdb-input", {
+                        attrs: {
+                          size: "sm",
+                          label: "Prénom",
+                          group: "",
+                          type: "email",
+                          validate: "",
+                          error: "wrong",
+                          success: "right"
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("mdb-input", {
+                        attrs: {
+                          size: "sm",
+                          label: "Champs",
+                          group: "",
+                          type: "text",
+                          validate: "",
+                          error: "wrong",
+                          success: "right"
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("p", [_vm._v("Date ")]),
+                      _vm._v(" "),
+                      _c(
+                        "datepicker",
+                        { attrs: { "bootstrap-styling": true } },
+                        [
+                          _c(
+                            "div",
+                            {
+                              staticClass: "calender-header",
+                              attrs: {
+                                slot: "beforeCalendarHeader",
+                                language: "fr"
+                              },
+                              slot: "beforeCalendarHeader"
+                            },
+                            [_vm._v("\n    Choisissez la date\n  ")]
+                          )
+                        ]
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "mdb-modal-footer",
+                    [
+                      _c(
+                        "mdb-btn",
+                        {
+                          attrs: { color: "secondary" },
+                          nativeOn: {
+                            click: function($event) {
+                              _vm.showModal = false
+                            }
+                          }
+                        },
+                        [_vm._v("Fermer")]
+                      ),
+                      _vm._v(" "),
+                      _c("mdb-btn", { attrs: { color: "primary" } }, [
+                        _vm._v("Envoyer")
+                      ])
+                    ],
+                    1
+                  )
+                ],
+                1
               )
             ],
             1
@@ -47001,6 +47073,7 @@ var render = function() {
         },
         [_vm._v("Ajouter un utilisateur")]
       ),
+      _c("br"),
       _vm._v(" "),
       _c(
         "mdb-modal",
@@ -47062,7 +47135,7 @@ var render = function() {
                     attrs: { slot: "beforeCalendarHeader", language: "fr" },
                     slot: "beforeCalendarHeader"
                   },
-                  [_vm._v("\n    Choose a Date\n  ")]
+                  [_vm._v("\n    Choisissez la date\n  ")]
                 )
               ])
             ],
@@ -47104,6 +47177,7 @@ var render = function() {
         },
         [_vm._v("Modifier un utilisateur")]
       ),
+      _c("br"),
       _vm._v(" "),
       _c(
         "mdb-modal",
@@ -47206,7 +47280,8 @@ var render = function() {
           }
         },
         [_vm._v("Supprimer un utilisateur")]
-      )
+      ),
+      _c("br")
     ],
     1
   )
@@ -47391,7 +47466,7 @@ var staticRenderFns = [
             ])
           ]),
           _vm._v(" "),
-          _c("li", { staticClass: "list-group-item list-group-item-danger" }, [
+          _c("li", { staticClass: "list-group-item list-group-item-success" }, [
             _c("a", { attrs: { href: "a-propos" } }, [
               _c("span", { staticClass: "circle" }, [_vm._v("3")]),
               _vm._v(" "),

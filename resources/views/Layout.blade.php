@@ -7,67 +7,70 @@
         <script>window.laravel={csrfToken:'{{csrf_token()}}'}</script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  <style>
+body {
+  font-family: "Lato", sans-serif;
+  
+   }
+h1{
+  color:white;
+}
+.sidebar {
+  height: 100%;
+  width: 300px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color:#5d5650;
+  overflow-x: hidden;
+  padding-top: 16px;
+}
+
+.sidebar a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: lightgrey;
+  display: block;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+  background-color:#178bdb;
+}
+
+.main {
+  margin-top:70px;
+  margin-left: 300px; /* Same as the width of the sidenav */
+  padding: 0px 10px;
+  
+
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+</style>
     </head>
     <body> 
-            <!--Navbar-->
-            <nav class="navbar navbar-expand-lg navbar-dark secondary-color">
-
-<!-- Navbar brand -->
-<a class="navbar-brand" href="#">Scolarité</a>
-
-<!-- Collapse button -->
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
-  aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
-  <span class="navbar-toggler-icon"></span>
-</button>
-
-<!-- Collapsible content -->
-<div class="collapse navbar-collapse" id="basicExampleNav">
-
-  <!-- Links -->
-  <ul class="navbar-nav mr-auto">
-    <li class="nav-item active">
-      <a class="nav-link" href="#">Profil
-        <span class="sr-only">(current)</span>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="Paramètres">Paramètres</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="Description">Description</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="a-propos">A propos</a>
-    </li>
-
-    <!-- Dropdown 
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
-        aria-haspopup="true" aria-expanded="false">Dropdown</a>
-      <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
-      </div>
-    </li>-->
-  </ul>
-  <!-- Links -->
-
-  <form class="form-inline">
-    <div class="md-form my-0">
-      <input class="form-control mr-sm-2" type="text" placeholder="Recherche" aria-label="Search">
-    </div>
-  </form>
+    <div class="sidebar">
+    <h1>Scolarité</h1><br><br>
+  <a href="#home"></span> Profil</a><hr>
+  <a href="#services">Paramètres</a><hr>
+  <a href="#clients">Description </a><hr>
+  <a href="#contact">A propos</a><hr>
 </div>
-<!-- Collapsible content -->
 
-</nav>
+<div class="main">
 <div id="app">
-@yield('content');
+@yield('content')
 
 </div>
 <script src="{{ asset('js/app.js') }}"></script>
-<!--/.Navbar-->
+</div>
+
 </body>
 </html>

@@ -21,8 +21,8 @@ Route::view('Login','Login');
 Route::get('/Profil/Supprimer-utilisateur',function(){
     return view('Supp');
 });
-Route::get('client','ClientsController@list');
+
 Route::view('Paramètres','Paramètres');
 Route::view('a-propos','a-propos');
 Route::view('Description','Description');
-Route::post('client','ClientsController@store');
+Route::view('Renseigement','Renseigement');
