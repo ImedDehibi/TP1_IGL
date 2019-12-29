@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Session;
 use Illuminate\Http\Request;
 use App\Presences;
 
@@ -27,9 +28,10 @@ class PresencesController extends Controller
         $presence->Debut =$request->debut;
         $presence->Fin =$request->fin;
         $presence -> save();
+        Session::flash('succes','Presence ajoutee!');
         }
         else{
-            print("erreur time");
+            Session::flash('error','Veuillez verifiez les horraires!');
         }
         return redirect()->back();
     }
