@@ -40,3 +40,11 @@ Route::view('Paramètres','Paramètres');
 Route::view('a-propos','a-propos');
 Route::view('Description','Description');
 Route::post('client','ClientsController@store');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
