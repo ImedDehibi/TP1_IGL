@@ -11,10 +11,13 @@
   <style>
 body {
   font-family: "Lato", sans-serif;
-  
+  background-color: lightgrey;
    }
 h1{
   color:white;
+}
+img{
+  margin-left:40px;
 }
 .sidebar {
   height: 100%;
@@ -23,7 +26,14 @@ h1{
   z-index: 1;
   top: 0;
   left: 0;
-  background-color:#5d5650;
+
+    background: -moz-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+    background: -webkit-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+    background: -webkit-gradient(linear, 45deg, from(rgba(42, 27, 161, 0.7)), to(rgba(29, 210, 177, 0.7)));
+    background: -o-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+    background: linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+
+
   overflow-x: hidden;
   padding-top: 16px;
 }
@@ -38,7 +48,7 @@ h1{
 
 .sidebar a:hover {
   color: #f1f1f1;
-  background-color:#178bdb;
+  background-color:#6200ea;
 }
 
 .main {
@@ -56,21 +66,25 @@ h1{
 </style>
     </head>
     <body> 
+    <div id="app">
     <div class="sidebar">
-    <h1>Scolarité</h1><br><br>
-  <a href="#home"></span> Profil</a><hr>
-  <a href="#services">Paramètres</a><hr>
-  <a href="#clients">Description </a><hr>
-  <a href="#contact">A propos</a><hr>
+    
+    <img src="../images/Paul-23-512.png" alt="Smiley face" height="200" width="200" class="pdp">
+  <a href="#"></span> Profil</a><hr>
+  <a href="Paramètres">Paramètres</a><hr>
+  <a href="Description">Description </a><hr>
+  <a href="a-propos">A propos</a><hr>
+  <Deconnect></Deconnect>
 </div>
 
 <div class="main">
-<div id="app">
+
 @yield('content')
 
 </div>
-<script src="{{ asset('js/app.js') }}"></script>
-</div>
 
+
+</div>
+<script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>

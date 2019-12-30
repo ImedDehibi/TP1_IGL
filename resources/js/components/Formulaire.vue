@@ -1,101 +1,68 @@
-<template >
-    <section class="form-gradient">
-      <mdb-row>
-        <mdb-col md="5">
-          <mdb-card>
-            <div class="header pt-3 blue-gradient">
-              <mdb-row class="d-flex justify-content-center">
-                <h3 class="white-text mb-3 pt-3 font-weight-bold">Connexion</h3>
-              </mdb-row>
-              
-            </div>
-            <mdb-card-body class="mx-4 mt-4">
-              <mdb-input label="Adresse mail" type="text"/>
-              <mdb-input label="Mot de passe" type="password" containerClass="mb-0"/>
-              <p class="font-small grey-text d-flex justify-content-end">Vous avez oublié votre<a href="#" class="dark-grey-text ml-1 font-weight-bold"> Mot de passe?</a></p>
-                                            <!-- Default inline 1-->
-                              <div class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" class="custom-control-input" id="defaultInline1" name="inlineDefaultRadiosExample">
-                                <label class="custom-control-label" for="defaultInline1">Etud</label>
-                              </div>
+ <template>
+ 
+  <mdb-container>
 
-                              <!-- Default inline 2-->
-                              <div class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" class="custom-control-input" id="defaultInline2" name="inlineDefaultRadiosExample">
-                                <label class="custom-control-label" for="defaultInline2">Ens</label>
-                              </div>
+    <mdb-row>
+      <mdb-col size="12" class="text-center mb-5">
+        
+      <mdb-btn outline="white" @click.native="showModal = true" >Connexion</mdb-btn>
+        <mdb-modal :show="showModal" @close="showModal = false" cascade class="text-left">
+          <mdb-modal-header class="primary-color white-text">
+            <h4 class="title">Connectez-vous</h4>
+          </mdb-modal-header>
+          <mdb-modal-body class="grey-text">
+            <mdb-input size="sm" label="Nom utilisateur"  group type="text" validate error="wrong" success="right"/>
+            <mdb-input  size="sm" label="Mot de passe" validate error="wrong" success="right" type="password"/>
+                    <div>
+                        <!-- Default inline 1-->
+                        <div class="custom-control custom-radio custom-control-inline">
+                          <input type="radio" name="radioInline" class="custom-control-input" id="defaultInline1">
+                          <label class="custom-control-label" for="defaultInline1">Etudiant</label>
+                        </div>
 
-                              <!-- Default inline 3-->
-                              <div class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" class="custom-control-input" id="defaultInline3" name="inlineDefaultRadiosExample">
-                                <label class="custom-control-label" for="defaultInline3">Admin</label>
-                              </div>
-              <mdb-row class="d-flex align-items-center mb-4 mt-5" style="margin-left:40px">
-                <mdb-col md="5" class="d-flex align-items-start">
-                  <div class="text-center ">
-                   <mdb-btn outline="primary">Connexion</mdb-btn>
-                  </div>
-                </mdb-col>
-                <mdb-col md="7" class="d-flex justify-content-end">
-                </mdb-col>
-              </mdb-row>
-            </mdb-card-body>
-          </mdb-card>
-        </mdb-col>
-      </mdb-row>
-    </section>
+                        <!-- Default inline 2-->
+                        <div class="custom-control custom-radio custom-control-inline">
+                          <input type="radio" name="radioInline" class="custom-control-input" id="defaultInline2">
+                          <label class="custom-control-label" for="defaultInline2">Enseignant</label>
+                        </div>
+
+                        <!-- Default inline 3-->
+                        <div class="custom-control custom-radio custom-control-inline">
+                          <input type="radio" name="radioInline" class="custom-control-input" id="defaultInline3">
+                          <label class="custom-control-label" for="defaultInline3">Administrateur</label>
+                        </div>
+                      </div>
+          </mdb-modal-body>
+          <mdb-modal-footer>
+            <mdb-btn color="secondary" @click.native="showModal = false">Fermer</mdb-btn>
+            <mdb-btn color="primary">Connexion</mdb-btn>
+          </mdb-modal-footer>
+        </mdb-modal>
+      </mdb-col>
+    </mdb-row>
+  </mdb-container>
 </template>
 <script>
-  import { mdbRow, mdbCol, mdbCard, mdbCardBody, mdbInput, mdbBtn, mdbIcon,mdbFormInline } from 'mdbvue';
+  import { mdbContainer, mdbRow, mdbCol, mdbInput, mdbTextarea, mdbBtn, mdbIcon, mdbModal, mdbModalHeader, mdbModalBody, mdbModalFooter } from 'mdbvue';
   export default {
     name: 'FormsPage',
     components: {
+      mdbContainer,
       mdbRow,
       mdbCol,
-      mdbCard,
-      mdbCardBody,
       mdbInput,
+      mdbTextarea,
       mdbBtn,
       mdbIcon,
-       mdbFormInline
+      mdbModal,
+      mdbModalHeader,
+      mdbModalBody,
+      mdbModalFooter
     },
     data() {
       return {
-        radio5: ''
+        showModal: false
       };
     }
   }
 </script>
-<style>
-section{
-
-  margin-top: 70px;
-}
-  .form-gradient .font-small {
-    font-size: 0.8rem; 
-    }
-
-  .form-gradient .header {
-    border-top-left-radius: .3rem;
-    border-top-right-radius: .3rem; }
-
-  .form-gradient input[type=text]:focus:not([readonly]) {
-    border-bottom: 1px solid #fd9267;
-    -webkit-box-shadow: 0 1px 0 0 #fd9267;
-    box-shadow: 0 1px 0 0 #fd9267; }
-
-  .form-gradient input[type=text]:focus:not([readonly]) + label {
-    color: #4f4f4f; }
-
-  .form-gradient input[type=password]:focus:not([readonly]) {
-    border-bottom: 1px solid #fd9267;
-    -webkit-box-shadow: 0 1px 0 0 #fd9267;
-    box-shadow: 0 1px 0 0 #fd9267; }
-
-  .form-gradient input[type=password]:focus:not([readonly]) + label {
-    color: #4f4f4f; }
-    template{
-      background-color: lightblue;
-    }
-
-</style>

@@ -12,18 +12,9 @@
     </head>
     <body>
         <div id="app">
-        <div class="container-fluid">
-        <div class="row">
-
-    <div class="col-4">
+     
     
-    </div>
-    <div class="col-8">
-    <formulaire></formulaire>
-    </div>
-  </div>
-       
-         </div>
+
         </div>
 
         <script src="{{ asset('js/app.js') }}"></script>
@@ -31,13 +22,4 @@
     </body>
    
 </html>
-<style>
-    body{
-        padding-bottom: 70px;
-    background-color: #202428;
-    background-image: url(../Images/Capture.png);
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image*/
-    background-size: cover; /* Resize the background image to cover the entire container */
-    }
-    </style>
+<
