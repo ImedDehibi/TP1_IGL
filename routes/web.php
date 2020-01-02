@@ -16,6 +16,7 @@ Route::get('/', function () {
 });
 Route::view('Paramètres','Paramètres');
 Route::view('Enseignant','Enseignant');
+Route::view('Etudiant','Etudiant');
 Route::view('a-propos','a-propos');
 Route::view('Description','Description');
 Route::post('Renseigement','NameController@store');

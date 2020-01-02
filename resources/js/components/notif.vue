@@ -1,9 +1,10 @@
 <template>
 <div class="mgn">
   <mdb-dropdown > 
-    <mdb-dropdown-toggle slot="toggle" color="danger">Notifications</mdb-dropdown-toggle>
+    <mdb-dropdown-toggle slot="toggle" color="info" @click.native="show=false">Notifications<mdb-badge color="danger" class="ml-2" v-if="show">New</mdb-badge>
+ </mdb-dropdown-toggle>
     <mdb-dropdown-menu>
-      <mdb-dropdown-item>Notification 1</mdb-dropdown-item>
+      <mdb-dropdown-item v-if="!show">Notification 1</mdb-dropdown-item>
        <div class="dropdown-divider"></div>
       <mdb-dropdown-item>Notification 2</mdb-dropdown-item>
        <div class="dropdown-divider"></div>
@@ -13,19 +14,25 @@
 </div>
 </template>
 <script>
-  import { mdbDropdown, mdbDropdownItem, mdbDropdownMenu, mdbDropdownToggle } from 'mdbvue';
+  import { mdbDropdown, mdbDropdownItem, mdbDropdownMenu, mdbDropdownToggle,mdbBadge } from 'mdbvue';
   export default {
     name: 'DropdownPage',
     components: {
       mdbDropdown,
       mdbDropdownItem,
       mdbDropdownMenu,
-      mdbDropdownToggle
+      mdbDropdownToggle,
+      mdbBadge,
+    },
+    data(){
+return{
+    show:true,
+}
     }
   }
 </script>
 <style scoped>
 .mgn{
-    padding-left: 1170px;
+    padding-left: 1100px;
 }
 </style>

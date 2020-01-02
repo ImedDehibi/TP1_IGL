@@ -16,6 +16,7 @@ class etudiantController extends Controller
     public function index()
     {
         $etudiants=Etudiant::all();
+        $etudiants=Etudiant::orderBy('created_at','desc')->paginate(3);
         if($etudiants->isNotEmpty()){
             $response=APIHelper::createAPIResponse(false,"200 OK","",$etudiants);
             return response()->json($response,200);

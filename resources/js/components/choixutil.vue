@@ -3,7 +3,7 @@
   <div class="mgn">
     <mdb-btn-group >
       <mdb-btn color="primary" size="lg" @click.native="gerer()">Enseignant</mdb-btn><br>
-      <mdb-btn color="pink" size="lg">Etudiant</mdb-btn><br>
+      <mdb-btn color="pink" size="lg" @click.native="gerer2()" >Etudiant</mdb-btn><br>
     </mdb-btn-group>
     <br><br>
   </div>
@@ -21,8 +21,10 @@ import { METHODS } from 'http';
     methods:{
       gerer(){
            window.location.href = '/Laravel/public/Enseignant';
+      },
+            gerer2(){
+           window.location.href = '/Laravel/public/Etudiant';
       }
-      
     }
   }
 </script>
