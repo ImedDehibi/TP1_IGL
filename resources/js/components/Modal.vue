@@ -1,5 +1,5 @@
 <template>
-  <mdb-container>
+  <mdb-container class="mgn">
     <mdb-row>
       <mdb-col size="12" class="text-center mb-5">
         
@@ -51,6 +51,42 @@
         </mdb-modal>
       </mdb-col>
     </mdb-row>
+     <mdb-col size="12" class="text-center mb-5">
+     <div>
+    <mdb-btn color="pink" @click.native="modal2 = true">Consulter votre emploi du temps</mdb-btn>
+    <mdb-modal :show="modal2" @close="modal2 = false" size="lg">
+      <mdb-modal-header>
+        <mdb-modal-title>Emploie du temps</mdb-modal-title>
+      </mdb-modal-header>
+      <mdb-modal-body> </mdb-modal-body>
+      <mdb-modal-footer>
+        <mdb-btn color="secondary" @click.native="modal2 = false">Fermer</mdb-btn>
+       
+      </mdb-modal-footer>
+    </mdb-modal>
+  </div>
+     </mdb-col>
+    <mdb-row>
+      
+     <mdb-col size="12" class="text-center mb-5">
+     <div>
+    <mdb-btn color="warning" @click.native="modal2 = true">Saisir  les notes de vos groupes </mdb-btn>
+    <mdb-modal :show="modal2" @close="modal2 = false" size="lg">
+      <mdb-modal-header>
+        <mdb-modal-title>Emploie du temps</mdb-modal-title>
+      </mdb-modal-header>
+      <mdb-modal-body> </mdb-modal-body>
+      <mdb-modal-footer>
+        <mdb-btn color="secondary" @click.native="modal2 = false">Fermer</mdb-btn>
+       
+      </mdb-modal-footer>
+    </mdb-modal>
+  </div>
+     </mdb-col>
+    <mdb-row>
+    </mdb-row>
+    </mdb-row>
+    
   </mdb-container>
 </template>
 <script>
@@ -78,6 +114,7 @@ import Datepicker from 'vuejs-datepicker';
     data() {
       return {
         showModal: false,
+        modal2:false,
        Presences:this.dataPresences,
         nom:'',
         pre:'',
@@ -136,5 +173,9 @@ else{
 p{
   font-size:20px;
 }
+.mgn{
+  margin-top: 200px;
+ 
 
+}
 </style>

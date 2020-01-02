@@ -19,9 +19,10 @@ Route::view('Enseignant','Enseignant');
 Route::view('a-propos','a-propos');
 Route::view('Description','Description');
 Route::post('Renseigement','NameController@store');
-
-Route::view('/RenseignerPresence','RenseignerPresence');
-
+Route::view('/EspaceEtudiant','EspaceEtudiant');
+Route::view('/EspaceEnseignant','EspaceEnseignant');
+Route::view('/EspaceAdministrateur','EspaceAdministrateur');
+Route::view('/EspaceAdministrateur/ChoixUtil','ChoixUtil');
 Route::get('/Presences', [
     'uses' => 'NameController@index'
 ]);

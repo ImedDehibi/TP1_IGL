@@ -31,6 +31,10 @@ Vue.component('Presences', require('./components/Presences.vue').default);
 Vue.component('Deconnect', require('./components/Deconnect.vue').default);
 
 Vue.component('Ensenregistres', require('./components/Ensenregistres.vue').default);
+Vue.component('choixfoncadmin', require('./components/choixfoncadmin.vue').default);
+Vue.component('choixfoncetud', require('./components/choixfoncetud.vue').default);
+Vue.component('choixutil', require('./components/choixutil.vue').default);
+Vue.component('notif', require('./components/notif.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

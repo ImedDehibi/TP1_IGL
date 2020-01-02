@@ -115,7 +115,7 @@
          <td>{{enseignant.Nom}}</td>
           <td>{{enseignant.Prenom}}</td><td>{{enseignant.NomUtilisateur}}</td><td>{{enseignant.MotDePasse}}</td><td>{{enseignant.ConfirmMotDePasse}}</td><td>{{enseignant.Module}}</td>
           <td>
-              <button type="button" class="btn btn-warning btn-md m-0"   @click="editer(enseignant)" >Choisir</button>
+              <button type="button" class="btn btn-warning btn-md m-0"   @click="editer(enseignant)" >Modifier</button>
           </td>
         <td>
               <button type="button" class="btn btn-danger btn-md m-0"   @click="deleteEnseignant(enseignant.id)" >Supprimer</button>

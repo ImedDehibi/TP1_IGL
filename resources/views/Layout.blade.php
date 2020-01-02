@@ -76,8 +76,10 @@ img{
   <a href="a-propos">A propos</a><hr>
   <Deconnect></Deconnect>
 </div>
-
+<notif></notif>
 <div class="main ">
+
+
 
 @yield('content')
 
