@@ -17,7 +17,7 @@ class NameController extends Controller
           
          ]);
 
-        if (request('ent')<=request('sor')){
+        if (request('ent')<request('sor')){
           Presences::create([
             'Nom' => request('nom'),
             'Prenom' =>request('pre'),
@@ -39,7 +39,7 @@ class NameController extends Controller
     public function index(){
       $yesterday = date("Y-m-d", strtotime( '-1 days' ) );
       $Presences= Presences::where('Date','>=',$yesterday)->orderBy('Date')->get();
-  
+      
       return view('Presences',[
          'Presences'=>$Presences,
        ]);

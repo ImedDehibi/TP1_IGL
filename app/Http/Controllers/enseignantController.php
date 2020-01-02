@@ -15,7 +15,9 @@ class enseignantController extends Controller
      */
     public function index()
     {
-        $enseignant=Enseignant::all();
+        $enseignant=Enseignant::orderBy('created_at','desc')->paginate(3);
+        
+
         if ($enseignant->isNotEmpty()){
             $response=APIHelper::createAPIResponse(false,"200 OK","",$enseignant);
             return response()->json($response,200);

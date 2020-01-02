@@ -11,13 +11,13 @@
   <style>
 body {
   font-family: "Lato", sans-serif;
-  background-color: lightgrey;
+  background-color: #b9bcbe;
    }
 h1{
   color:white;
 }
 img{
-  margin-left:40px;
+  margin-left:0px;
 }
 .sidebar {
   height: 100%;
@@ -69,7 +69,7 @@ img{
     <div id="app">
     <div class="sidebar">
     
-    <img src="../images/Paul-23-512.png" alt="Smiley face" height="200" width="200" class="pdp">
+    <img src="../images/user-experiance-icon.png" alt="Smiley face" height="200" width="300" class="img-circle">
   <a href="#"></span> Profil</a><hr>
   <a href="Paramètres">Paramètres</a><hr>
   <a href="Description">Description </a><hr>
@@ -77,7 +77,7 @@ img{
   <Deconnect></Deconnect>
 </div>
 
-<div class="main">
+<div class="main ">
 
 @yield('content')
 

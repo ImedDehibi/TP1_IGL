@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class PresenceSeeder extends Seeder
+class ArticlesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,6 +11,6 @@ class PresenceSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Presences :: class, 5) -> create();
+        factory(App\Article::class,30)->create();
     }
 }

@@ -25,6 +25,7 @@ Route::delete('/EspaceAdministrateur/Enseignant/{id}','enseignantController@dest
 
 
 
+
 Route::get('/EspaceAdministrateur/Etudiant','etudiantController@index');
 Route::get('/EspaceAdministrateur/Etudiant/{id}','etudiantController@show');
 Route::post('/EspaceAdministrateur/Etudiant','etudiantController@store');
@@ -41,6 +42,9 @@ Route::post('/EspaceEnseignant/Cours','CoursController@store');
 Route::get('/EspaceEtudiant','Controller@ConsulterCours');
 Route::get('/EspaceEtudiant/file/{id}','Controller@downloadfile');
 
-
-
-
+/*************************************************/
+Route::get('articles','ArticleController@index');
+Route::get('article/{id}','ArticleController@show');
+Route::post('article','ArticleController@store');
+Route::put('article/{id}','ArticleController@store');
+Route::delete('article/{id}','ArticleController@destroy');

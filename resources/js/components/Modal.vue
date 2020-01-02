@@ -13,7 +13,7 @@
           <mdb-modal-body class="grey-text">
                        <mdb-input size="sm" label="Nom" group type="text" validate error="wrong" success="right" required v-model="nom"/>
                        <mdb-input size="sm" label="Prénom"  group type="text" validate error="wrong" success="right" required v-model="pre"/>
-                        <mdb-input size="sm" label="Numéro du bureau"  group type="number" validate error="wrong" success="right" required v-model="num" min="1"/>
+                        <mdb-input size="sm" label="Numéro du bureau"  group type="number" validate error="wrong" success="right" required v-model.number="num" min="1"/>
                         <!--  <p>Date 
                               <datepicker :bootstrap-styling="true" required v-model="date" type="date">
                         <div slot="beforeCalendarHeader" class="calender-header" language="fr">
@@ -101,48 +101,19 @@ import Datepicker from 'vuejs-datepicker';
         
 
         }).then((result)=>{
-           var ladate=new Date();
+// convert date format to "YYYY-MM-DD"
+var a = new Date().toJSON().slice(0, 10)
+// get date from input field, by default is "YYYY-MM-DD" format
 
-           if (ladate.getFullYear().toString()>this.date.substr(0,4)) this.show2=true;
-           else{
-             if (ladate.getFullYear().toString() == this.date.substr(0,4)) {
-                 if (ladate.getMonth().toString()>this.date.substr(6,2))this.show2=true;
-                 else{
-                    if (ladate.getMonth().toString()== this.date.substr(6,2)) this.show2=true;
-                    else{
-                       if (ladate.getDate().toString()>this.date.substr(8,2)) this.show2=true;
-                       else{
-                        if(this.ent>this.sor) {
-                        this.show2=false;
-                        this.show=true;
-                          
-                        }
-                                else{
+// compare
 
-                                    this.showModal=false;
-                                this.nom='';
-                                this.pre='';
-                                this.num='';
-                                this.date='';
-                                this.ent='';
-                                this.sor='';
-                                this.show=false;
-                                this.show2=false;
-                                }
-           
-           
-                       }
-                    }
-                 }
-                 
-             }
-             else{
-                   if(this.ent>this.sor) 
+if(a > this.date) this.show2=true;
+else{
+ if(this.ent>=this.sor) 
                    {
                       this.show2=false;
                      this.show=true;}
                                 else{
-
                                     this.showModal=false;
                                 this.nom='';
                                 this.pre='';
@@ -153,11 +124,7 @@ import Datepicker from 'vuejs-datepicker';
                                 this.show=false;
                                 this.show2=false;
                                 }
-                 }
-           }
-          
-           
-           
+}
         });
         
       }
@@ -169,7 +136,5 @@ import Datepicker from 'vuejs-datepicker';
 p{
   font-size:20px;
 }
-.border-red{
-  border-color: red;
-}
+
 </style>
