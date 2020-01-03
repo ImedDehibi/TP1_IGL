@@ -143,7 +143,7 @@ class enseignantController extends Controller
                 return response()->json($responce,401);
             }
         }else{
-            return response()->json(["status"=>"error","message"=>" Teacher with id {{$id}} not found . "]);
+            return response()->json(true,"500","teacher delete failed",null);
 
         }
        

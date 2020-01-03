@@ -6,20 +6,20 @@ use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
-class EnseignantTest extends TestCase
+class EtudiantTest extends TestCase
 {
-    /**
+     /**
      * A basic unit test example.
      *
      * @return void
      */
-    public function test_de_laffichage_des_enseignantsSuccessfully()
+    public function test_de_laffichage_des_etudiantsSuccessfully()
     {
-        $response=$this->json('GET','/api/EspaceAdministrateur/Enseignant');
+        $response=$this->json('GET','/api/EspaceAdministrateur/Etudiant');
         $response->assertStatus(200);
     }
    
-    public function test_de_l_ajout_des_enseignantsSuccessfully()
+    public function test_de_l_ajout_des_etudiantsSuccessfully()
     {
         $register = [
             'Nom' => 'UserTest',
@@ -27,30 +27,30 @@ class EnseignantTest extends TestCase
             'NomUtilisateur' => 'user2@test.com',
             'MotDePasse' => 'testpass',
             'ConfirmMotDePasse' => 'testpass',
-            'Module' => 'UserTest'
+            'NiveauEtude' => 'UserTest'
         ];
-        $response=$this->json('POST','/api/EspaceAdministrateur/Enseignant',$register);
+        $response=$this->json('POST','/api/EspaceAdministrateur/Etudiant',$register);
 
         $response->assertStatus(201);
 
 
     }
-    public function test_de_la_modification_des_enseignantsSuccessfully()
+    public function test_de_la_modification_des_etudiantsSuccessfully()
     {
         $register = [
             'Nom' => 'UserTest',
             'Prenom' => 'UserTest',
             'NomUtilisateur' => 'user2@test.com',
             'MotDePasse' => 'testpass',
-            'ConfirmMotDePasse' => 'testpass',
-            'Module' => 'UserTest'
+            'ConfirmMotDePasse' => 'j',
+            'NiveauEtude' => 'UserTest'
         ];
-        $response=$this->json('PUT','/api/EspaceAdministrateur/Enseignant/8',$register);
+        $response=$this->json('PUT','/api/EspaceAdministrateur/Etudiant/5',$register);
 
-        $response->assertStatus(201);
+        $response->assertStatus(200);
 
     }
-    public function test_de_la_modification_des_enseignantsFailed()
+    public function test_de_la_modification_des_etudiantsFailed()
     {
         $register = [
             'Name' => 'UserTest',
@@ -60,12 +60,12 @@ class EnseignantTest extends TestCase
             'ConfirmMotDePasse' => 'testpass',
             'Module' => 'UserTest'
         ];
-        $response=$this->json('PUT','/api/EspaceAdministrateur/Enseignant/8',$register);
+        $response=$this->json('PUT','/api/EspaceAdministrateur/Etudiant/8',$register);
 
         $response->assertStatus(422);
 
     }
-    public function test_de_l_ajout_des_enseignantsFailed()
+    public function test_de_l_ajout_des_etudiantsFailed()
     {
         $registered = [
             'Name' => 'UserTest',
@@ -76,25 +76,25 @@ class EnseignantTest extends TestCase
             'Module' => 'UserTest'
         ];
 
-        $response=$this->json('POST','/api/EspaceAdministrateur/Enseignant',$registered);
+        $response=$this->json('POST','/api/EspaceAdministrateur/Etudiant',$registered);
 
         $response->assertStatus(422);
 
     }
-    public function test_de_la_suppression_des_enseignantsSuccessfully()
+    public function test_de_la_suppression_des_etudiantsSuccessfully()
     {
       
         
-        $response=$this->json('delete','/api/EspaceAdministrateur/Enseignant/7');
+        $response=$this->json('delete','/api/EspaceAdministrateur/Etudiant/5');
 
         $response->assertStatus(200);
 
     }
-    public function test_de_la_suppression_des_enseignantsFailed()
+    public function test_de_la_suppression_des_etudiantsFailed()
     {
       
         
-        $response=$this->json('delete','/api/EspaceAdministrateur/Enseignant/5');
+        $response=$this->json('delete','/api/EspaceAdministrateur/Etudiant/7');
 
         $response->assertStatus(500);
 

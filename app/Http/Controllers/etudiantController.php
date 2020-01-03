@@ -151,7 +151,7 @@ class etudiantController extends Controller
             }
 
         }else{
-            return response()->json(["status"=>"error","message"=>"Student with {{$id}} not found."]);
+            return response()->json(true,"500","student delete failed.",null);
 
         }
       
